@@ -115,6 +115,80 @@ let mean = numbers.reduce (function(a, b){
 });
 console.log(mean);
 
+/*11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array*/
+
+let arrayA= [6, 11, 29, 37, 53, 8];
+let arrayB= [9, 37, 57, 65, 66];
+
+function largerAverage (arrayOne, arrayTwo) {
+    let one = arrayA.reduce (function (a, b) {
+        return a + b;
+    })
+    let two = arrayB.reduce (function(a, b) {
+        return a + b;
+    })
+    if (one > two ) {
+        console.log("true");
+    } else {
+        console.log("false");
+    }
+}
+console.log(largerAverage(arrayA, arrayB));
+
+/*12. Write a function called willBuyDrink that takes a boolean isHotOutside and a number moneyInPocket and returns true if it is hot outisde and if moneyInPocket is greater than 10.50*/
+
+function willBuyDrink (temperature, moneyInPocket) {
+    if (temperature > 90) {
+        isHotOutside = true;
+    if (isHotOutside = true && moneyInPocket > 10.50) {
+        return true;
+    }   
+    } else {
+        return false;
+    }
+}
+console.log (willBuyDrink(99, 10.51));
+
+/*13. I like to play Dungeons and Dragons(D&D). In D&D whenever we want our character to perform any action in game we roll a twenty-sided dice (d20).  The d20 roll is used to determine the successful of an action. If the roll on a d20 is equal to or greater than the difficulty for any particular action then the action is successful, if not then the action is unsuccessful. I would like to write a simple program to represent the outcome of a player character's action in game.*/
+
+/*Create a random number generator, a function that takes in two parameters a minimum value and a maximum value and creates a random number between those values including those values.*/
+
+const random = (min,max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+const diceRoll = () => random(1, 20);
+
+/*Roll the d20 for the player character*/
+
+let playerCharacter = diceRoll();
+
+/*Store the result of the dice roll*/
+
+let result = "";
+
+/*Determine the success of result*/
+
+let difficulty = 17;
+playerCharacter = "Gandalf";
+
+if(playerCharacter >= difficulty) {
+    result = `${playerCharacter}'s action is successful`;
+} else {
+    result = `${playerCharacter} has failed`;
+}
+
+/*Print the result*/
+console.log(result);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
